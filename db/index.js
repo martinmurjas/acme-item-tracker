@@ -1,23 +1,31 @@
-const Sequelize = require('sequelize');
-const conn = new Sequelize(process.env.DATABASE_URL || 'postgres://localhost/the_acme_item_tracker_db');
+const Sequelize = require("sequelize");
+const conn = new Sequelize(
+  process.env.DATABASE_URL || "postgres://localhost/the_acme_item_tracker_db"
+);
 
-const { STRING } = Sequelize;
+const { STRING, INTEGER } = Sequelize;
 
-const User = conn.define('user', {
+const User = conn.define("user", {
   name: {
-    type: STRING 
-  }
+    type: STRING,
+  },
 });
 
-const Thing = conn.define('thing', {
+const Thing = conn.define("thing", {
   name: {
-    type: STRING 
-  }
+    type: STRING,
+  },
+  rating: {
+    type: INTEGER,
+    defaultValue: 1,
+  },
 });
 
+User.hasMany(Thing);
+Thing.belongsTo(User);
 
 module.exports = {
   conn,
   User,
-  Thing
+  Thing,
 };

@@ -1,0 +1,44 @@
+.Things div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.Things h2 {
+  font-weight: 200;
+}
+
+.Things li {
+  display: flex;
+  align-items: center;
+}
+
+.Things li > * {
+  padding: 0.25rem;
+  margin: 0.25rem;
+}
+
+.Things li i {
+  font-size: 1rem;
+}
+
+.Things .rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Things .rating div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Things .rating p {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.Things .rating label {
+  font-size: 0.7rem;
+  color: dodgerblue;
+}

@@ -1,0 +1,25 @@
+i {
+  padding: 0.5rem;
+  margin: 0.25rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  color: rgb(140, 140, 140);
+}
+
+i:hover {
+  transition: 0.3s;
+  transform: scale(1.3);
+}
+
+i.fa-plus:hover {
+  color: rgb(34, 157, 0);
+}
+
+i.fa-minus:hover,
+i.fa-trash:hover {
+  color: rgb(163, 4, 4);
+}
+
+ul {
+  list-style: none;
+}
